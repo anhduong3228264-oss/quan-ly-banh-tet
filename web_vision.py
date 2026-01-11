@@ -56,9 +56,9 @@ def load_and_process_data(url):
 
 # 3. GIAO DIỆN & TÍNH TOÁN
 st.sidebar.header("⚙️ Năng lực xưởng")
-so_nguoi = st.sidebar.number_input("Số nhân công gói bánh", value=3)
-gio_lam = st.sidebar.number_input("Giờ làm/ngày", value=8)
-ngay_con_lai = st.sidebar.number_input("Số ngày đến hạn giao", value=2)
+so_nguoi = st.sidebar.number_input("Số nhân công gói bánh", value=)
+gio_lam = st.sidebar.number_input("Giờ làm/ngày", value=)
+ngay_con_lai = st.sidebar.number_input("Số ngày đến hạn giao", value=)
 
 tong_nang_luc = so_nguoi * gio_lam * ngay_con_lai * 60 # Đổi ra phút
 st.sidebar.info(f"Tổng quỹ thời gian: **{tong_nang_luc:,.0f}** phút")
@@ -126,4 +126,5 @@ if not df.empty:
         st.dataframe(df)
 
 else:
+
     st.warning("Chưa tải được dữ liệu. Vui lòng kiểm tra lại Link Google Sheet.")
